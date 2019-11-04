@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A70569022370386B00268785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70569012370386B00268785 /* AppDelegate.swift */; };
-		A70569042370386B00268785 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A70569032370386B00268785 /* GameScene.sks */; };
-		A70569062370386B00268785 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A70569052370386B00268785 /* Actions.sks */; };
 		A70569082370386B00268785 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70569072370386B00268785 /* GameScene.swift */; };
 		A705690A2370386B00268785 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70569092370386B00268785 /* GameViewController.swift */; };
 		A705690D2370386B00268785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A705690B2370386B00268785 /* Main.storyboard */; };
@@ -17,6 +15,7 @@
 		A70569122370386C00268785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70569102370386C00268785 /* LaunchScreen.storyboard */; };
 		A705691D2370386C00268785 /* BigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705691C2370386C00268785 /* BigTests.swift */; };
 		A70569282370386C00268785 /* BigUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70569272370386C00268785 /* BigUITests.swift */; };
+		A7056937237039BD00268785 /* SwiftGameOfLifeCircular in Frameworks */ = {isa = PBXBuildFile; productRef = A7056936237039BD00268785 /* SwiftGameOfLifeCircular */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 /* Begin PBXFileReference section */
 		A70568FE2370386B00268785 /* Big.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Big.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70569012370386B00268785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A70569032370386B00268785 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		A70569052370386B00268785 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A70569072370386B00268785 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A70569092370386B00268785 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A705690C2370386B00268785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7056937237039BD00268785 /* SwiftGameOfLifeCircular in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				A70569012370386B00268785 /* AppDelegate.swift */,
-				A70569032370386B00268785 /* GameScene.sks */,
-				A70569052370386B00268785 /* Actions.sks */,
 				A70569072370386B00268785 /* GameScene.swift */,
 				A70569092370386B00268785 /* GameViewController.swift */,
 				A705690B2370386B00268785 /* Main.storyboard */,
@@ -150,6 +146,9 @@
 			dependencies = (
 			);
 			name = Big;
+			packageProductDependencies = (
+				A7056936237039BD00268785 /* SwiftGameOfLifeCircular */,
+			);
 			productName = Big;
 			productReference = A70568FE2370386B00268785 /* Big.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +221,9 @@
 				Base,
 			);
 			mainGroup = A70568F52370386B00268785;
+			packageReferences = (
+				A7056935237039BD00268785 /* XCRemoteSwiftPackageReference "SwiftGameOfLifeCircular" */,
+			);
 			productRefGroup = A70568FF2370386B00268785 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,10 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A705690D2370386B00268785 /* Main.storyboard in Resources */,
-				A70569042370386B00268785 /* GameScene.sks in Resources */,
 				A705690F2370386C00268785 /* Assets.xcassets in Resources */,
 				A70569122370386C00268785 /* LaunchScreen.storyboard in Resources */,
-				A70569062370386B00268785 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +598,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A7056935237039BD00268785 /* XCRemoteSwiftPackageReference "SwiftGameOfLifeCircular" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/phcacique/SwiftGameOfLifeCircular.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A7056936237039BD00268785 /* SwiftGameOfLifeCircular */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A7056935237039BD00268785 /* XCRemoteSwiftPackageReference "SwiftGameOfLifeCircular" */;
+			productName = SwiftGameOfLifeCircular;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A70568F62370386B00268785 /* Project object */;
 }

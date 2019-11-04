@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftGameOfLifeCircular",
+        "repositoryURL": "https://github.com/phcacique/SwiftGameOfLifeCircular.git",
+        "state": {
+          "branch": "master",
+          "revision": "ea8343831c6e0ab057a580de8acd54004403bbb3",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
